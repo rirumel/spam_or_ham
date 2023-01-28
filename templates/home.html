@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <h2>Spam Detection</h2>
+
+        </div>
+    </header>
+
+    <div class="ml-container">
+
+        <form action="{{ url_for('predict')}}" method="POST">
+            <p>Enter Your Text Here</p>
+            <textarea name="text" rows="4" cols="50"></textarea>
+            <br />
+
+            <input type="submit" class="btn-info cool-button" value="Predict">
+
+        </form>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script>
+    document.querySelector(".btn-info").addEventListener("click", function (event) {
+        var text = document.querySelector("textarea").value;
+        if (text.trim() == "") {
+            event.preventDefault();
+            alert("Please enter some text");
+        }
+    });
+</script>
