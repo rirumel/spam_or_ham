@@ -4,7 +4,6 @@ import pickle
 import numpy as np
 
 app = Flask(__name__)
-server = app.server
 
 model_file = '/model/trained_model.pkl'
 filename = '/model/tfidf_vectorizer.pkl'
