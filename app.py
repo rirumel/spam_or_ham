@@ -5,8 +5,8 @@ import numpy as np
 
 app = Flask(__name__)
 
-model_file = '/model/trained_model.pkl'
-filename = '/model/tfidf_vectorizer.pkl'
+model_file = 'model/trained_model.pkl'
+filename = 'model/tfidf_vectorizer.pkl'
 tfidf = TfidfVectorizer()
 
 @app.route('/')
